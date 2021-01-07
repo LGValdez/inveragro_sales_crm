@@ -26,9 +26,22 @@ class SaleOrder(models.Model):
         crm_lead = self.env['crm.lead']
         res = super(SaleOrder, self).create(values)
         crm_lead_values = {
+            'type': 'opportunity',
             'name': _('Sale - ') + res.partner_id.name,
             'partner_id': res.partner_id.id,
             'planned_revenue': res.amount_total,
         }
         crm_lead.create(crm_lead_values)
         return res
+
+
+class SaleOrderLine(models.Model):
+    _inherit = 'sale.order.line'
+
+    @api.onchange('product_template_id')
+    def onchange_product_template_id(self):
+        if self.product_template_id:
+            product_id = self.env['product.product'].search([
+                ('product_tmpl_id', '=', self.product_template_id.id)], limit=1)
+            if product_id and self.product_id != product_id:
+                self.product_id = product_id.id
