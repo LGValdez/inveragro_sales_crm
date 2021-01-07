@@ -27,36 +27,62 @@
             <xpath expr="//field[@name='partner_shipping_id']" position='attributes'>
                 <attribute name="invisible">1</attribute>
             </xpath>
-            <xpath expr="//field[@name='date_order']" position='attributes'>
+            <xpath expr="//field[@name='product_template_id']" position='attributes'>
+                <attribute name="invisible">0</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='validity_date']" position='attributes'>
+                <attribute name="string">Date of Issue</attribute>
                 <attribute name="invisible">1</attribute>
             </xpath>
-            <xpath expr="//field[@name='validity_date']/following-sibling::div/label" 
+
+            <xpath expr="//field[@name='validity_date']/following-sibling::div/label[@for='date_order']" 
+                   position='attributes'>
+                <attribute name="string">Date of Issue</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='validity_date']/following-sibling::field[@name='date_order']" 
                    position='attributes'>
                 <attribute name="invisible">1</attribute>
             </xpath>
-            
-            <xpath expr="//field[@name='validity_date']" 
+
+            <xpath expr="//field[@name='validity_date']/following-sibling::div/following-sibling::div/label[@for='date_order']" 
                    position='attributes'>
                 <attribute name="string">Date of Issue</attribute>
             </xpath>
-            <xpath expr="//field[@name='validity_date']/following-sibling::div/label" 
+
+            <xpath expr="//field[@name='validity_date']/following-sibling::div/following-sibling::div[@class='o_td_label']" 
                    position='attributes'>
-                <attribute name="string">Date of Issue</attribute>
+                <attribute name="attrs">{'invisible': [('state', '=', 'no_state')]}</attribute>
             </xpath>
-            <xpath expr="//field[@name='validity_date']/following-sibling::div/following-sibling::div/label" 
+            <xpath expr="//field[@name='validity_date']/following-sibling::field/following-sibling::field[@name='date_order']" 
                    position='attributes'>
-                <attribute name="string">Date of Issue</attribute>
+                <attribute name="attrs">{
+                    'required': [('state', 'in', ['sale', 'done'])]
+                }</attribute>
             </xpath>
 
             <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" 
                    position='attributes'>
                 <attribute name="string">Code</attribute>
             </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_template_id']" 
+                   position='attributes'>
+                <attribute name="string">Description</attribute>
+                <attribute name="invisible">0</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree/field[@name='name']" 
+                   position='attributes'>
+                <attribute name="invisible">1</attribute>
+            </xpath>
             
             <xpath expr="//field[@name='partner_id']" position='attributes'>
-                <attribute name="context">
-                    {'res_partner_search_mode': 'customer', 'show_address': 0, 'show_vat': 0}
-                </attribute>
+                <attribute name="context">{
+                    'res_partner_search_mode': 'customer', 
+                    'show_address': 0, 
+                    'show_vat': 0
+                }</attribute>
             </xpath>
         </field>
     </record>
