@@ -1,15 +1,22 @@
 # -*- coding: utf-8 -*-
 
 from odoo import api, fields, models, _
+from odoo.exceptions import UserError
 
 
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
+    def _get_branch_office(self):
+        if not self.env.user.branch_office:
+            raise UserError(_("Assign a branch office to the user before selling."))
+        return self.env.user.branch_office.id
+
     partner_phone = fields.Char('Phone')
     partner_address = fields.Char('Address')
     delivery_time = fields.Char('Delivery Time')
     payment_condition = fields.Char('Payment Condition')
+    branch_office = fields.Many2one('branch.office', 'Branch Office', default=_get_branch_office)
 
     @api.onchange('partner_id')
     def _onchange_partner_id(self):
@@ -29,6 +36,7 @@ class SaleOrder(models.Model):
             'type': 'opportunity',
             'name': _('Sale - ') + res.partner_id.name,
             'partner_id': res.partner_id.id,
+            'branch_office': res.branch_office.id,
             'planned_revenue': res.amount_total,
         }
         crm_lead.create(crm_lead_values)
