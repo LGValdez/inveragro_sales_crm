@@ -13,6 +13,7 @@
             <xpath expr="//field[@name='payment_term_id']" position='before'>
                 <field name="delivery_time" required="1"/>
                 <field name="payment_condition"/>
+                <field name="branch_office" invisible="1"/>
             </xpath>
 
             <xpath expr="//field[@name='sale_order_template_id']" position='attributes'>

@@ -13,7 +13,12 @@
         'website_sale',
     ],
     'data': [
+        'security/ir.model.access.csv',
+
+        'views/branch_office.xml',
         'views/sale_order.xml',
+        'views/crm_lead.xml',
+        'views/res_users.xml',
     ],
     'installable': True,
     'application': True,

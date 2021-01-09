@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0-20210104\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-06 22:38+0000\n"
-"PO-Revision-Date: 2021-01-06 22:38+0000\n"
+"POT-Creation-Date: 2021-01-09 02:42+0000\n"
+"PO-Revision-Date: 2021-01-09 02:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,9 +21,65 @@ msgid "Address"
 msgstr "Dirección"
 
 #. module: inveragro_sales_crm
+#: code:addons/inveragro_sales_crm/models/sale_order.py:0
+#, python-format
+msgid "Assign a branch office to the user before selling."
+msgstr "Asigne una Sucursal al Usuario antes de vender"
+
+#. module: inveragro_sales_crm
+#: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.view_branch_office_form
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: inveragro_sales_crm
+#: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.crm_case_kanban_view_leads
+msgid "Branch"
+msgstr "Sucursal"
+
+#. module: inveragro_sales_crm
+#: model:ir.model,name:inveragro_sales_crm.model_branch_office
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_crm_lead__branch_office
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_sale_order__branch_office
+#: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.view_branch_office_form
+msgid "Branch Office"
+msgstr "Sucursal"
+
+#. module: inveragro_sales_crm
+#: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.view_branch_office_form
+msgid "Branch Office Name"
+msgstr "Nombre Sucursal"
+
+#. module: inveragro_sales_crm
+#: model:ir.actions.act_window,name:inveragro_sales_crm.view_branch_office_action
+#: model:ir.ui.menu,name:inveragro_sales_crm.view_branch_office_menu
+#: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.view_branch_office_tree
+msgid "Branch Offices"
+msgstr "Sucursales"
+
+#. module: inveragro_sales_crm
+#: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.view_branch_office_form
+msgid "Branch Sellers"
+msgstr "Vendedores"
+
+#. module: inveragro_sales_crm
 #: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.sales_crm_interaction
 msgid "Code"
 msgstr "Código"
+
+#. module: inveragro_sales_crm
+#: model_terms:ir.actions.act_window,help:inveragro_sales_crm.view_branch_office_action
+msgid "Create a branch office"
+msgstr "Crear una sucursal"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office__create_date
+msgid "Created on"
+msgstr "Creado en"
 
 #. module: inveragro_sales_crm
 #: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.sales_crm_interaction
@@ -39,6 +95,41 @@ msgstr "Tiempo Entrega"
 #: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.sales_crm_interaction
 msgid "Description"
 msgstr "Descripción"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office__id
+msgid "ID"
+msgstr "ID"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: inveragro_sales_crm
+#: model:ir.model,name:inveragro_sales_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office__name
+msgid "Name"
+msgstr "Nombre"
 
 #. module: inveragro_sales_crm
 #: model:ir.model.fields,field_description:inveragro_sales_crm.field_sale_order__payment_condition
@@ -75,3 +166,24 @@ msgstr "Pedidos de Venta"
 #: model:ir.model,name:inveragro_sales_crm.model_sale_order_line
 msgid "Sales Order Line"
 msgstr "Líneas de Pedidos de Venta"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office__seller_ids
+msgid "Sellers"
+msgstr "Vendedores"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_branch_office__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: inveragro_sales_crm
+#: model:ir.model.fields,field_description:inveragro_sales_crm.field_res_users__branch_office
+msgid "User's Branch Office"
+msgstr "Sucursal del Usuario"
+
+#. module: inveragro_sales_crm
+#: model:ir.model,name:inveragro_sales_crm.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
