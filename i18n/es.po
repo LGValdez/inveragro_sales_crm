@@ -152,6 +152,11 @@ msgid "Product Template"
 msgstr "Descripción"
 
 #. module: inveragro_sales_crm
+#: model_terms:ir.ui.view,arch_db:inveragro_sales_crm.view_account_payment_form_inveragro
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: inveragro_sales_crm
 #: code:addons/inveragro_sales_crm/models/sale_order.py:0
 #, python-format
 msgid "Sale - "

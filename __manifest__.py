@@ -9,6 +9,7 @@
     'description': "",
     'depends': [
         'crm', 
+        'account',
         'sale_management', 
         'website_sale',
     ],
@@ -19,6 +20,7 @@
         'views/sale_order.xml',
         'views/crm_lead.xml',
         'views/res_users.xml',
+        'views/account_payment.xml',
     ],
     'installable': True,
     'application': True,
